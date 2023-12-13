@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* 모든 페이지 공통 CSS */
+
+
+@import url(reset.css);
+
+
+@import url(top.css);
+
+/* navi기준 페이지 */
+@import url(home.css);
+@import url(news.css);
+@import url(menu.css);
+@import url(store.css);
+@import url(support.css);
+
+@import url(navi.css);
+
+@import url(bottom.css);
+
+
+@import url(login.css);
+
+/* 폰트, 리셋 */
+html{scroll-behavior: smooth;}
+body,iframe,h1,a,h2,h3,input,h4,h5{
+    border: 0;
+    outline: 0; 
+    color: #333333; 
+    font: normal 24px/1.5em Candara,"맑은 고딕","Malgun Gothic",sans-serif;
+    letter-spacing: 0.05em;
+    overflow-x: hidden;
+}
+.textX{transform: scaleX(0.95);}
+
+
+/* 스크롤바 */
+::-webkit-scrollbar {width: 0;} /* 기존 스크롤바 삭제 */
+.scroll_wrap{ /* 새 스크롤바 프레임 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    width: 20px;
+    height: 100%;
+}
+.scroll_track{ /* 스크롤바 트랙 위치 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px;
+    min-height: 10px;
+    height: 100%;
+}
+.scroll_thumb{ /* 새 커스텀 스크롤바 */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+    width: 10px;
+    min-height: 10px;
+    height: 100%;
+    margin: 6px;
+    transition: border-radius 0.3s, width 0.3s, background-color 0.3s, opacity 0.5s;
+    opacity: 0;
+    cursor: pointer;
+}
+.scroll_thumb:hover{
+    background-color: rgba(190,30,30,0.8);
+    border-radius: 7px;
+    width: 14px;
+    min-height: 14px;
+}
+.scroll_thumb:active{
+    background-color: #bf0000;
+    border-radius: 7px;
+    width: 14px;
+    min-height: 14px;
+}
+
+
+/* classList.add 전용 */
+.drag_disturb{user-select: none;}

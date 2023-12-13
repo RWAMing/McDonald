@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+
+/* 3 STROE */
+.store_bg{ /* 제목 : 가까운 맥도날드를 만나보세요 */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: url(../images/i1_HOME/store_bg.png) no-repeat center center;
+    width: 1920px;
+    height: 966px;
+    transform: translateX(-50%);
+}
+.store_bg h3 a{ /*제목(하이퍼링크)*/
+    position: absolute;
+    top: 220px;
+    left: 970px;
+    color: white;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 5px 5px 0 rgba(255,236,74,0.75);
+    -webkit-text-stroke: 1px black;
+    -moz-text-stroke: 1px black;
+    -ms-text-stroke: 1px black;
+    -o-text-stroke: 1px black;
+    white-space: nowrap;
+}
+
+
+
+
+/* 좌측(지도) */
+.store_bg_left{
+    float: left;}
+.store_bg_left>p{ /* 지도 p */
+    position: relative;
+    width: 900px;
+    height: 966px;
+}
+.store_bg_left>p>img{ /* 지도 img */
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 600px;
+    height: 599px;
+    transform: translateY(-50%) scale(0.9);
+}
+
+
+
+
+/* 우측 */
+.store_bg_right{float: left;}
+
+
+/* 우측 1검색 */
+.search_store_wrap{
+    position: absolute;
+    top: 500px;
+    right: 300px;
+    width: 650px;
+    height: 190px;
+}
+/* 검색 필터 */
+.search_filter_wrap{
+    width: 630px;
+    height: 100px;
+}
+.search_filter_wrap div{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+.search_filter_wrap input{ /* filter 진짜 버튼기능 */
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 27px;
+    height: 27px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+.search_filter_button{ /* filter 버튼 이미지 */
+    position: absolute;
+    top: 7px;
+    left: 0;
+    display: block;
+    background-color: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-radius: 25%;
+    width: 27px;
+    height: 27px;
+    transition: all 0.2s;
+}
+.search_filter_wrap div:hover .search_filter_button{border: 2px solid rgba(255,255,255,0.75);}
+.search_filter_wrap input:checked~label .search_filter_button{background-color: #bf0000;}
+.search_filter_wrap label{ /* filter 텍스트 */
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-family: "맑은 고딕","Malgun Gothic",sans-serif;
+    margin-left: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+/* 검색창 */
+.search_store{
+    position: absolute;
+    left: -18px;
+    bottom: 0;
+    border-radius: 25px;
+    width: 660px;
+    height: 70px;
+    font-size: 24px;
+    text-indent: 30px;
+    margin-top: 10px;
+}
+.search_store_button{ /* 검색 버튼 */
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+    background: url(../images/i1_HOME/icon_search.png) no-repeat center center rgba(255,255,255,0);
+    border-radius: 25px;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+
+
+
+/* QR : M오더 주문하기 */
+.delivery_QR_wrap{ /*wrap*/
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    transform: translate(50%,-50%);
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+#delivery_QR_button{
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+    cursor: pointer;
+}
+.delivery_QR_wrap:hover{
+    height: 400px;
+}
+.delivery_QR_wrap:hover .delivery_QR{height: 300px;}
+.delivery_QR_wrap:hover .delivery_QR img, .delivery_QR_wrap:hover .delivery_QR p{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.4s;
+}
+.delivery_QR_txt{ /* 텍스트 (M오더 주문하기) */
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    z-index: 6;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 24px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.red{ /* 텍스트 (M오더) */
+    font-size: 20px;
+    display: block;
+    color: #bf0000;
+}
+.delivery_QR{ /* QR코드 배경 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    background-color: white;
+    width: 100px;
+    height: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translate(-50%,-50%);
+}
+.delivery_QR p{
+    position: relative;
+    bottom: 10px;
+    left: 0;
+    opacity: 0;
+    height: 12px;
+    font-size: 12px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.delivery_QR img{ /* QR코드 이미지 */
+    opacity: 0;
+    margin: 6px 0;
+    transition: all 0.3s ease-in-out;
+}
+.delivery_QR img:nth-of-type(1){margin-top: 45px;}
+.delivery_QR img:nth-of-type(2){margin-bottom: 35px;}
+.QR_edge_round{ /* hover시 하단 둥글게 */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+    transition: all 0.7s ease-in-out;
+}

@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+
+/*상단*/
+#top{
+    position: relative;
+    z-index: 1;
+    height: 140px;}/*전체*/
+#top h1{ /*맥도날드 로고*/
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    overflow: visible;
+}
+#top h1 img{transition: all 0.5s;}
+#top h1:hover img{transform: scale(1.1);}
+#top h1:active img{transform: scale(0.95);}
+
+
+
+
+/* 퀵메뉴 */
+.quick{ /*전체*/
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 퀵 좌우 여백*/
+.blank{flex-grow: 1;}
+
+
+/* 퀵 왼쪽 (McDonald's 브랜드스토리) */
+.ql_brand_wrap{ /*전체*/
+    flex-grow: 0;
+    width: 720px;
+    height: 140px;
+    transition: all 0.2s;
+}
+.ql_brand_wrap:hover{transform: translate(-2px,-2px);}
+.ql_brand_wrap:active{transform: translate(1px,1px);}
+.ql_brand_wrap a{ /*하이퍼링크 프레임 크기*/
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #bf0000;
+    border: 1px solid #333333;
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 0 rgba(255,236,74,0.75);
+    width: 211px;
+    height: 77px;
+    color: #ffbc0d;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px 0 rgba(255,236,74,0.75);
+    -webkit-text-stroke: 1px black;
+    -moz-text-stroke: 1px black;
+    -ms-text-stroke: 1px black;
+    -o-text-stroke: 1px black;
+    line-height: 56px;
+    margin: 25px 10px;
+}
+.ql_brand_wrap .brandstory{ /* 텍스트(브랜드 스토리) */
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-family: "맑은 고딕","Malgun Gothic",sans-serif;
+    font-weight: bold;
+    line-height: 0px;
+    text-shadow: none;
+    -webkit-text-stroke: 0;
+    -moz-text-stroke: 0;
+    -ms-text-stroke: 0;
+    -o-text-stroke: 0;
+}
+
+
+/* 퀵 오른쪽(장바구니, 마이페이지) */
+.qr{
+    flex-grow: 0;
+    width: 760px;
+    height: 140px;
+}
+.qr_wrap{float: right;}
+.qr_bag,.qr_my{
+    float: left;
+    margin: 33px 15px;
+}
+.qr_bag img,.qr_my img{
+    transition: all 0.2s;
+    cursor: pointer;}
+.qr_bag:hover img,.qr_my:hover img{transform: translate(-2px,-2px);}
+.qr_bag:active img,.qr_my img:active{transform: translate(1px,1px);}
+.qr_bag{
+    position: relative;
+    z-index: 1;
+}
+.qr_my{
+    position: relative;
+    top: 2px;
+    z-index: 100;
+}

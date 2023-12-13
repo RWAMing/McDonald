@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+
+/* index.html의 section */
+@import url(1news.css);
+@import url(2menu.css);
+@import url(3store.css);
+@import url(4support.css);
+
+
+/* Contents 전체 */
+#contents{ /*전체*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 4117px;
+    transform: translateX(-50%);
+}
+#contents>h2{font-size: 0;}
+/*큰 섹션(news, menu, store, support)*/
+#contents>section{
+    position: relative;
+    min-width: 100%;
+    min-height: 966px;
+}

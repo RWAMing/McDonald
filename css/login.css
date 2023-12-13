@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* 로그인 */
+
+
+/*index.html - 로그인 iframe*/
+.mypage{position: relative;} /*mypage 아이콘 i*/
+
+.login_wrap{transition: all 0.5s;}
+
+.login_wrap iframe{ /*iframe*/
+    display: block;
+    background: white;
+    position: fixed; 
+    left: 50%; 
+    top: 50%; 
+    z-index: 100;
+    width: 419px;
+    height: 0;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.5s;
+}
+.login_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.login_exit_wrap{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    width: 419px;
+    height: 0;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.login_exit_btn{
+    display: block;
+    position: absolute;
+    right: 21px;
+    bottom: 242px;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+/* login.html */
+.login{ /*전체*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 419px;
+    height: 613px;
+    overflow: hidden;
+    transform: translateX(-50%);
+}
+.login fieldset{margin-top: 70px;}
+.login legend{/* 로그인(제목) */
+    display: block;
+    box-sizing: border-box;
+    color: #bf0000;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+
+/* login.html - 아이디, 비밀번호 입력 */
+.login input[placeholder="아이디"],.login input[placeholder="비밀번호"]{ /*아이디, 비밀번호 입력*/
+    display: block;
+    border-bottom: 1px solid #333333;
+    width: 330px;
+    height: 52px;
+    font-size: 18px;
+    /* line-height: 52px; */
+    margin: 0 auto;
+}
+.login input[placeholder="아이디"]{ /*아이디입력 밑 여백*/
+    margin-bottom: 30px;
+}
+
+
+/* login.html - 자동로그인 */
+.autologin_wrap{ /* 자동로그인 전체*/
+    position: relative;
+}
+#autologin{ /*자동로그인 input(숨김)*/
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 1;
+    opacity: 0;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.auto_img{ /*자동로그인 버튼off*/
+    display: block;
+    box-sizing: border-box;
+    position: absolute; 
+    top: 30px;
+    left: 50px;
+    background-color: #ffffff;
+    border: 1px solid #333333;
+    width: 19px;
+    height: 19px;
+    transition: all 0.2s;
+}
+#autologin:checked~.auto_img{ /*자동로그인 버튼on*/
+    background-color: #bf0000;
+    border: 1px solid #bf0000;
+}
+.autologin_wrap label{ /*텍스트(자동로그인)*/
+    display: block;
+    font-size: 14px;
+    line-height: 78px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/* login.html - 로그인버튼 & 찾기,회원가입 */
+.login input[type="submit"]{/* 로그인버튼 */
+    display: block;
+    background-color: #bf0000;
+    border-radius: 35px;
+    width: 330px;
+    height: 70px;
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#lost_signup p{display: inline;}
+#lost_signup p a{/* 찾기, 회원가입 */
+    color: #bf0000;
+    font-size: 14px;
+    margin: 20px 15px;
+}
+#lost_signup p:first-child a{margin-left: 95px;}
+#lost_signup p a:hover{text-decoration: underline;}
+
+
+/* X 닫기(이미지) */
+#quit{font-size: 0;}
+#quit img{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
