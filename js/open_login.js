@@ -32,12 +32,13 @@ function open_login(mypage) {
 
 function close_login() { // 닫기
     scroll_thumb_z.classList.remove('z_0');
-    login_bg.style.opacity = '0';
+    login_iframe.style.opacity = '0';
     login_exit_wrap.classList.remove('login_exit_wrap');
     login_exit_btn.classList.remove('login_exit_btn');
     var disappear_timer;
     disappear_timer = setTimeout(function () {
         login_bg.classList.remove('login_bg');
+        login_iframe.style.height = '0px';
         login_iframe.src = 'login.html';
         main_navi_wrap.style.zIndex = '5';
         bottom.style.zIndex = '0';
