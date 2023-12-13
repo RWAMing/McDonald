@@ -7,17 +7,17 @@
     position: fixed;
     top: 0;
     left: 50%;
-    z-index: 50;
+    z-index: 5;
     width: 100%;
     height: 0;
     max-width: 1920px;
 }
+.main_navi_wrap_z{z-index: 0;}
 #main_navi{
     box-sizing: border-box;
     position: fixed;
     bottom: 0;
     left: 50%;
-    z-index: 50;
     display: flex;
     background-color: #bf0000;
     width: 100%;
@@ -79,7 +79,6 @@
     position: fixed;
     right: 25px;
     bottom: 75px;
-    /* z-index: 50; */
     cursor: pointer;
     animation: deli_icon_ani 2s ease-in-out infinite;
 }

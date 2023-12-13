@@ -1,5 +1,3 @@
-window.onload = function(){
-
 
 // 스크롤바
 /*
@@ -40,7 +38,6 @@ window.onload = function(){
         scroll_style.borderRadius = '7px';
         scroll_style.width = '14px';
         scroll_style.minHeight = '14px';
-        scroll_style.cursor = 'grab';
     }
     scroll_thumb.addEventListener('mousedown',move_style);
     function hover_style(){ // 이동 완료시, 스타일 복귀
@@ -48,7 +45,6 @@ window.onload = function(){
         scroll_style.borderRadius = '7px';
         scroll_style.width = '14px';
         scroll_style.minHeight = '14px';
-        scroll_style.cursor = 'cursor';
     }
     scroll_thumb.addEventListener('mouseover',hover_style);
     function idle_style(){ // 이동 완료시, 스타일 복귀
@@ -265,13 +261,11 @@ window.onload = function(){
     function show(){
         clearTimeout(hide_3s); // hide 타이머 삭제
         scroll_style.opacity = '1'; // 즉각 보임
-        scroll_style.cursor = 'cursor';
     }
     function hide(){
         if(!dragging){ // 드래그 중 숨김 방지
             hide_3s = setTimeout(function(){ // hide 타이머 시작
                 scroll_style.opacity = '0';  // 숨김
-                scroll_style.cursor = 'default';
             }, 3000);
         }
     }
@@ -294,4 +288,3 @@ window.onload = function(){
 
 
 // 스크롤바 ================================================================
-}

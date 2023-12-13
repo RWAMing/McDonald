@@ -40,7 +40,7 @@ body,iframe,h1,a,h2,h3,input,h4,h5{
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 40;
+    z-index: 100;
     width: 20px;
     height: 100%;
 }
@@ -65,7 +65,7 @@ body,iframe,h1,a,h2,h3,input,h4,h5{
     margin: 6px;
     transition: border-radius 0.3s, width 0.3s, background-color 0.3s, opacity 0.5s;
     opacity: 0;
-    cursor: pointer;
+    cursor: grab;
 }
 .scroll_thumb:hover{
     background-color: rgba(190,30,30,0.8);
@@ -79,6 +79,7 @@ body,iframe,h1,a,h2,h3,input,h4,h5{
     width: 14px;
     min-height: 14px;
 }
+.z_0{z-index: 0;}
 
 
 /* classList.add 전용 */
