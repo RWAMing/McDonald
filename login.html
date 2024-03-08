@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+<!-- 스크롤바(공통) -->
+    <div class="scroll_wrap">
+        <div class="scroll_thumb"></div>
+        <div class="scroll_track"></div>
+    </div>
+    <div class="login">
+        <form action="login.asp" method="post" target="_parent">
+            <fieldset>
+                <legend><span class="textX">로그인</span></legend>
+                <input type="text" placeholder="아이디">
+                <input type="password" placeholder="비밀번호">
+                <div class="autologin_wrap">
+                    <input type="checkbox" id="autologin" name="auto" value="1">
+                    <span class="auto_img"></span>
+                    <label for="autologin"><span class="textX">자동 로그인</span></label>
+                </div>
+                <input type="submit" value="로그인">
+                <div id="lost_signup">
+                    <p><a href="#"><span class="textX">회원가입</span></a></p>
+                    <p><a href="find_idpw.html"><span class="textX">아이디/비밀번호 찾기</span></a></p>
+                </div>
+                <p id="quit"><img src="images/i1_HOME/X.png" alt="닫기" width="25" height="25">닫기</p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

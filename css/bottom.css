@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+#bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3864px;
+    left: 50%;
+    z-index: 0;
+    background-color: #bf0000;
+    width: 1920px;
+    height: 235px;
+    font-family: "맑은 고딕","Malgun gothic",serif;
+    transform: translateX(-50%);
+}
+#logo_bottom{
+    max-width: 88px;
+    height: 77px;
+    margin-right: 60px;
+}
+#logo_bottom img{
+    width: 88px;
+    height: 77px;
+}
+#logo_bottom img{
+    width: 88px;
+    height: 77px;
+}
+#bottom_text{
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.5em;
+    min-width: 880px;
+}
+#bottom_text address{font-style: normal;}
+#sns_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 270px;
+}
+#sns_icon a{
+    width: 40px;
+    height: 40px;
+}
+#web_access img{
+    width: 133px;
+    height: 100px;
+    margin-left: 60px;
+}
